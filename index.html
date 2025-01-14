@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/flexslider.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 <body>
@@ -20,8 +21,12 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button id="theme-toggle" class="btn">Light/Dark Mode</button>
+                </li>
             </ul>
         </nav>
     </header>
@@ -48,30 +53,45 @@
 
     <!-- About Section -->
     <section id="about" class="site-section">
-        <h2>About Me</h2>
+        <h2 data-aos="fade-up">About Me</h2>
         <p>A brief introduction about yourself, your background, and your goals.</p>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Skills Section with Progress Bars -->
     <section id="skills" class="skills-section">
-        <h2>Skills</h2>
+        <h2 data-aos="fade-up">Skills</h2>
         <div class="skills-grid">
-            <div class="skill-box animated fadeInUp">Python</div>
-            <div class="skill-box animated fadeInUp">Machine Learning</div>
-            <div class="skill-box animated fadeInUp">Data Analysis</div>
+            <div class="skill-bar" data-aos="fade-right">
+                <h3>Python</h3>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 90%;">90%</div>
+                </div>
+            </div>
+            <div class="skill-bar" data-aos="fade-left">
+                <h3>Machine Learning</h3>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 80%;">80%</div>
+                </div>
+            </div>
+            <div class="skill-bar" data-aos="fade-up">
+                <h3>Data Analysis</h3>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 85%;">85%</div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Experience Section with Timeline -->
     <section id="experience" class="timeline">
-        <div class="timeline-container left">
+        <div class="timeline-container left" data-aos="fade-right">
             <div class="content">
                 <h3>Job Title 1</h3>
                 <span class="date">Jan 2021 - Dec 2022</span>
                 <p>Brief description of your role and achievements.</p>
             </div>
         </div>
-        <div class="timeline-container right">
+        <div class="timeline-container right" data-aos="fade-left">
             <div class="content">
                 <h3>Job Title 2</h3>
                 <span class="date">Jan 2020 - Dec 2020</span>
@@ -82,34 +102,84 @@
 
     <!-- Projects Section -->
     <section id="projects" class="portfolio-area">
-        <h2>Projects</h2>
+        <h2 data-aos="fade-up">Projects</h2>
+        <div class="filters">
+            <ul>
+                <li data-filter="all" class="active">All</li>
+                <li data-filter="data-science">Data Science</li>
+                <li data-filter="web-development">Web Development</li>
+            </ul>
+        </div>
         <div class="filters-content">
-            <div class="project-item">
-                <h3>Project 1</h3>
-                <p>Brief description of the project.</p>
+            <div class="project-item" data-category="data-science" data-aos="fade-up">
+                <h3>Data Science Project 1</h3>
+                <p>Description of a data science project.</p>
             </div>
-            <div class="project-item">
-                <h3>Project 2</h3>
-                <p>Brief description of the project.</p>
+            <div class="project-item" data-category="web-development" data-aos="fade-up">
+                <h3>Web Development Project 1</h3>
+                <p>Description of a web development project.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section">
+        <h2 data-aos="fade-up">Blog</h2>
+        <div class="blog-grid">
+            <div class="blog-card" data-aos="fade-up">
+                <h3>Blog Title 1</h3>
+                <p>A brief description of your blog post.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            <div class="blog-card" data-aos="fade-up">
+                <h3>Blog Title 2</h3>
+                <p>A brief description of your blog post.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <h2 data-aos="fade-up">Testimonials</h2>
+        <div class="testimonials-carousel">
+            <div class="testimonial-item" data-aos="fade-right">
+                <p>"An amazing professional! Delivered outstanding results on time."</p>
+                <h3>- John Doe</h3>
+            </div>
+            <div class="testimonial-item" data-aos="fade-left">
+                <p>"Exceptional skills and attention to detail. Highly recommend!"</p>
+                <h3>- Jane Smith</h3>
             </div>
         </div>
     </section>
 
     <!-- Certifications Section -->
     <section id="certifications" class="certifications-container">
-        <h2>Certifications</h2>
-        <div class="certification-card">
+        <h2 data-aos="fade-up">Certifications</h2>
+        <div class="certification-card" data-aos="fade-up">
             <h3>Certification Name</h3>
             <p>Issuer: XYZ</p>
+            <p class="details">Issued on: Jan 2022 | Valid till: Dec 2024</p>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-content">
-        <h2>Contact</h2>
-        <p>Email: your.email@example.com</p>
-        <p>Phone: +123456789</p>
-        <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
+        <h2>Contact Me</h2>
+        <p>Feel free to get in touch with me via this form!</p>
+        <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit" class="btn">Send Message</button>
+        </form>
     </section>
 
     <!-- Footer -->
@@ -128,8 +198,17 @@
         </div>
     </footer>
 
+    <!-- Back-to-Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
     <!-- Include JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
